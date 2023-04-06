@@ -1,0 +1,317 @@
+// $primary_color: #4CD3AA
+// $secondary_color: #E86A92
+// $thrid_color: #2B2D42
+// $fourth_color: #F7E733
+// $fifth_color: #8E9DCC
+
+
+// widget color : c
+// wc2 #00bde3
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+// Header Styling
+
+header{
+       background-color: #2B2D42 ;
+       display: flex ;
+       flex-direction: right ;
+       justify-content: space-between;
+       height: 10vh;
+       padding: 0 15% 0 15% ;
+       box-sizing: content-box;
+      }
+.logo{
+  position: relative;
+  top: 2.5vh;
+      span{
+           position: relative;
+           bottom: 9px;
+           font-size: 25px;
+           font-family: Alkatra; 
+           left: 4px;
+          }
+      .weather{
+          color: #4CD3AA    ;
+        }
+      .forecast{
+          color: #fff;    
+        }  
+      img{
+          width: 35px
+        }
+}
+form{
+  display: flex;
+  flex-direction: right;
+  position: relative;
+  top: 2.75vh;
+        input{
+          width: 15vw;
+          height: 3.75vh;
+          border-radius: 40px;
+
+        }
+        button{
+          width: 90px;
+          height: 4.5vh;
+          margin-left: 15px;
+          border-radius: 10px;
+          background-color: #4CD3AA;
+          font-family: Alkatra;
+          font-size: large;
+          color: #fff;
+        }
+        #Search_Place:focus{
+          outline: none;
+      }
+      #ErrorMsg{
+          text-transform: capitalize;
+          font-weight: 400;
+          background-color: red;
+          font-size: 12px;
+          font-style: italic;
+          padding: 0.8em;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+          opacity: 0;
+          word-spacing: 5px;
+      }
+      #SearchButton:hover{
+          cursor: pointer;
+          background-color: rgba(15, 10, 63, 0);
+      }
+}
+
+
+// Main styling
+
+main{
+  background-color:#4CD3AA;
+      .weather-container{
+        padding: 5vh 10vw 5vh 10vw;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        column-gap: 2vw;
+        row-gap: 2vh;
+        width: 80vw;
+        height: auto;
+                #day1{
+                 background-color: #2B2D42;
+                 border-radius: 2vh;
+                 height: 450px;
+                 grid-column-start: 1;
+                 grid-column-end: 6;
+                       .DateTime_Container{
+                        display: flex;
+                        flex-direction: right;
+                        justify-content: space-between;
+                        color: #fff;
+                        margin: 3vh 4vw 3vh 4vw ;
+                        font-size: 25px;
+                        border-bottom: 1px solid #fff;
+                       }
+                       .Weather_Details{
+                        display: grid;
+                        width: 72vw;
+                        height: vh;
+                        margin: 0 4vw 0 4vw;
+                        grid-template-columns: repeat(3,1fr);
+                        grid-template-rows: repeat(8,1fr);
+                        grid-gap: 1vw;
+                                   h3{
+                                    color: #fff;
+                                    background: rgba(128, 128, 128, 0.281);
+                                    border-radius: 10px;
+                                    text-align: center;
+                                    padding-top: 5px;
+                                    padding-bottom: 5px;
+                                    font-size: 20px;
+                                   }
+                                   #WeatherConditionBox{
+                                    border-radius: 10px;
+                                    grid-column-start: 1;
+                                    grid-column-end: 2;
+                                    grid-row-start: 2;
+                                    grid-row-end: 9;
+                                    background: rgba(128, 128, 128, 0.281);
+                                    text-align: center;
+                                    color: #fff;
+                                    font-size: 22px;
+                                          h5{
+                                            border-bottom: 1px solid #fff;
+                                           
+                                            padding: 8px;
+                                          }
+                                          img{
+                                           width: 120px;
+                                           margin-top: 40px;
+                                          }
+                                         
+                                   }
+                                   #Temperature-box{
+                                    border-radius: 10px;
+                                    background-color: rgba(128, 128, 128, 0.281);
+                                    grid-column-start: 2;
+                                    grid-column-end: 4;
+                                    grid-row-start: 1;
+                                    grid-row-end: 5;
+                                    text-align: center;
+                                    color: #fff;
+                                    font-size: 22px;
+                                    h5{
+                                      border-bottom: 1px solid #fff;
+                                      padding: 3px;
+                                    }
+                                    p{
+                                      font-size: 45px;
+                                      margin: 40px;
+                                    }
+                                   }
+                                   #Humidity-box{
+                                   background-color: rgba(128, 128, 128, 0.281);
+                                   grid-row-start: 5;
+                                   grid-row-end: 9;
+                                   text-align: center;
+                                    color: #fff;
+                                    font-size: 22px;
+                                    border-radius: 10px;
+                                    h5{
+                                      border-bottom: 1px solid #fff;
+                                      padding: 3px;
+                                    }
+                                    p{
+                                      font-size: 45px;
+                                      margin: 40px;
+                                    }
+                                   }
+                                   #Wind-box{
+                                    background-color: rgba(128, 128, 128, 0.281);
+                                    grid-row-start: 5;
+                                    grid-row-end: 9;
+                                    text-align: center;
+                                    color: #fff;
+                                    font-size: 22px;
+                                    border-radius: 10px;
+                                    h5{
+                                      border-bottom: 1px solid #fff;
+                                      padding: 3px;
+                                    }
+                                    p{
+                                      font-size: 45px;
+                                      margin: 40px;
+                                    }
+                                   }
+                         
+                       }
+                }
+                .ForeCastItem{
+                  background-color: #2B2D42;
+                  height: 68vh;
+                  border-radius: 10px;
+                display: grid;
+                grid-template-columns: 1;
+                grid-template-rows: 10vh 40vh;
+                    h5{
+                      color: #fff;
+                      background-color: rgba(128, 128, 128, 0.281);
+                      font-size: 22px;
+                      grid-row-start: 1;
+                      grid-row-end: 2;
+                      margin: 10px;
+                      border-radius: 10px;
+                      text-align: center;
+                      padding-top: 8px;
+                    }
+                    .ForeCastItem-Details{
+                       display: grid;
+                            img{
+                                 width: 90px;
+                                position: relative;
+                                top: 0px;
+                                left: 45px;
+                            }
+                            .ConditionBox{
+                                  p{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    padding-right: 5px;
+                                  }
+                               
+
+                            }
+                            div{
+                              background-color: rgba(128, 128, 128, 0.281);
+                            margin: 8px;
+                      border-radius: 10px;
+                            }
+                            p{
+                            background-color: rgba(128, 128, 128, 0.281);
+                            margin: 10px;
+                      border-radius: 10px;
+                      color: #fff;
+                      text-align: center;
+                      font-size: 22px;
+                             
+                            }
+                    }
+                }
+ }
+
+               
+               
+              
+               
+      }
+
+
+
+
+
+
+    
+      footer{
+        background-color: #2B2D42;
+        height: 12vh;
+        display: flex;
+        padding: 0 15% 0 15% ;
+        flex-direction: right;
+        justify-content: space-between;
+       box-sizing: content-box;
+       color: #fff;
+       p.name{
+        color: #4CD3AA;
+        font-family: Alkatra;
+       }
+             p{
+              display: inline;
+              font-size: 18px;
+              position: relative;
+              top: 4vh;
+              font-family: Alkatra;
+                   
+             }
+            .logo_foot{
+              margin-top: 2.5vh;
+                  span{
+                       position: relative;
+                       bottom: 9px;
+                       font-size: 25px;
+                       font-family: Alkatra; 
+                       left: 4px;
+                      }
+                  .weather{
+                      color: #4CD3AA    ;
+                    }
+                  .forecast{
+                      color: #fff;    
+                    }  
+                  img{
+                      width: 35px
+                    }
+            }
+          }
